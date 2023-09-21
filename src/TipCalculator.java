@@ -24,11 +24,11 @@ public class TipCalculator {
                 totalCost = totalCost + input;
             }
         }
-
+        //Make the ones below updated variables instead of long print statements
         System.out.println("-----------------------");
         System.out.println("Bill before tip $" + totalCost);
-        System.out.println("Tip Percentage: " + (tipPercent * 100) + "%");
-        System.out.println("Total tip: $" + (totalCost * tipPercent));
+        System.out.println("Tip Percentage: " + (int) (tipPercent * 100) + "%");
+        System.out.println("Total tip: $" + (double) Math.round(((totalCost * tipPercent) * 100) / 100));
         System.out.println("Total bill with tip: $" + (totalCost * (1 + tipPercent)));
         System.out.println("Per person cost before tip: $" + (totalCost / peopleNum));
         System.out.println("Tip per person: $" + ((totalCost * (1 + tipPercent)) / peopleNum));
