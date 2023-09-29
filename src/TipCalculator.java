@@ -44,6 +44,8 @@ public class TipCalculator {
         System.out.println("Tip per person: $" + (double) Math.round((totalCost * tipPercent / peopleNum) * 100) / 100);
         totalCost = (totalCost * (1 + tipPercent));
         System.out.println("Total cost per person: $" + (double) Math.round((totalCost / peopleNum) * 100) / 100);
+        System.out.println("-----------------------");
+        System.out.println("-----------------------");
         System.out.println("Star Rating: " + starNum + " stars");
         if (starNum == 5) {
             System.out.println("Thank you for giving us 5 stars!");
