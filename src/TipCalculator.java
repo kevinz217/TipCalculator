@@ -3,13 +3,14 @@ public class TipCalculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        // variables to use
         double totalCost = 0;
         int peopleNum;
         double tipPercent;
         int temp;
         double input = 0;
-        String items;
 
+        //introduces itself and asks basic questions for amount of people and tip percent
         System.out.println("Welcome to the Tip Calculator!");
         System.out.print("How many people are in your group? ");
         peopleNum = scan.nextInt();
@@ -19,6 +20,7 @@ public class TipCalculator {
         scan.nextLine();
         tipPercent = temp / 100.0;
 
+        //input for the costs until input is -1
         while (input != -1) {
             System.out.print("Enter a cost in dollars and cents, e.g 12.50 (-1 to end) ");
             input = scan.nextDouble();
@@ -26,15 +28,13 @@ public class TipCalculator {
             if (input != -1 ) {
                 totalCost = totalCost + input;
             }
-            System.out.println("Enter the item: ");
-            scan.nextLine();
-            items = ;
         }
 
+        //asks the star rating
         System.out.print("Would you like to enter a star rating? (0-5) ");
         int starNum = scan.nextInt();
 
-            // change into variables
+        //beginning of the tip calculations
         System.out.println("-----------------------");
         System.out.println("Bill before tip $" + totalCost);
         System.out.println("Tip Percentage: " + (int) (tipPercent * 100) + "%");
@@ -47,6 +47,8 @@ public class TipCalculator {
         System.out.println("-----------------------");
         System.out.println("-----------------------");
         System.out.println("Star Rating: " + starNum + " stars");
+
+        // prints the star rating
         if (starNum == 5) {
             System.out.println("Thank you for giving us 5 stars!");
         } else if (1 < starNum && starNum < 5) {
@@ -54,6 +56,7 @@ public class TipCalculator {
         } else {
             System.out.println("How can you be so cruel??!");
         }
+
         scan.close();
         // learned Math.round from https://stackoverflow.com/questions/11701399/round-up-to-2-decimal-places-in-java
     }
